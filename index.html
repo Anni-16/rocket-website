@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RocketIndexer – Rank faster</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand logo fw-bold d-flex align-items-center" href="#"
+          ><i class="bi bi-rocket-takeoff-fill"></i>RocketIndexer</a
+        >
+        <button
+          class="navbar-toggler border-0"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">API</a></li>
+            <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Extension</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Telegram</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+          <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+            <a href="#" class="nav-link p-0">Sign In</a>
+            <a href="#" class="btn btn-org btn-sm px-3"
+              ><i class="bi bi-rocket-takeoff me-1"></i>Start Free</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="container">
+        <h1 class="mb-4">
+          rank <span>faster</span><br />(before competitors do)
+        </h1>
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3 mb-5"
+        >
+          <a href="#pricing" class="btn btn-org px-4 py-2 mono small"
+            >Start Indexing Now</a
+          >
+          <div class="setup mono">
+            Setup in 30s &nbsp;<i class="bi bi-chevron-right"></i>
+          </div>
+        </div>
+
+        <div class="row g-3 text-start mt-4">
+          <div class="col-lg-4">
+            <div class="panel">
+              <div class="d-flex justify-content-between mono muted small mb-3">
+                <span>User</span><span class="org">Engine</span
+                ><span>Google</span>
+              </div>
+              <div class="term mono" style="min-height: 90px">
+                1. URL Submitted<br />2. Engine analyzes &amp; routes<br />3.
+                Ping Googlebot (Instant)<br /><span class="ok"
+                  >4. Successfully Indexed (3m)</span
+                >
+              </div>
+              <h6 class="mt-4 fw-bold">Indexing Timeline</h6>
+              <span class="badge-g"
+                ><i class="bi bi-lightning-charge-fill org"></i> Guaranteed |
+                Minutes, not days</span
+              >
+              <div class="mt-3">
+                <div class="small muted mb-2">Live Indexing Process</div>
+                <div class="step mono">
+                  <span class="dot" style="background: #fff"></span>URL
+                  Submitted to RocketIndexer
+                </div>
+                <div class="step mono">
+                  <span class="dot" style="background: #ff5a0a"></span>Engine
+                  analyzes &amp; routes
+                </div>
+                <div class="step mono">
+                  <span class="dot" style="background: #ff5a0a"></span>Ping
+                  Googlebot (Instant)
+                </div>
+                <div class="step mono">
+                  <span class="dot" style="background: #3b82f6"></span>Bot
+                  visits link (~2-3 min)
+                </div>
+                <div class="step mono">
+                  <span class="dot" style="background: var(--grn)"></span>Fully
+                  Indexed in Google (~5m)
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel">
+              <div class="d-flex align-items-center gap-2 mb-3">
+                <i class="bi bi-rocket-takeoff-fill org"></i
+                ><strong class="small">googlebot</strong
+                ><span class="badge-g mono">CRAWLER</span
+                ><span class="muted small ms-auto">active</span>
+              </div>
+              <div class="small mb-2">
+                <i class="bi bi-exclamation-triangle muted"></i> Status
+                <span class="org ms-2">● Scanning...</span>
+              </div>
+              <div class="term mono" id="term" style="min-height: 190px"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="panel">
+              <div class="text-center small fw-semibold mb-3">
+                Successfully Indexed in Google
+              </div>
+              <div class="mono muted small mb-3">
+                &gt; Results: <span class="org">1 found</span>
+              </div>
+              <div class="result">
+                <div class="muted mb-2">
+                  <i class="bi bi-search"></i> Google Search Preview
+                </div>
+                <div class="fw-semibold">YourWebsite</div>
+                <a href="#" class="text-decoration-none" style="color: #60a5fa"
+                  >How to Index Your Links Faster</a
+                >
+                <div class="muted mt-1" style="font-size: 0.68rem">
+                  Learn the best strategies to get your content indexed by
+                  Google in minutes using the RocketIndexer API…
+                </div>
+              </div>
+              <div class="mt-5 small">
+                <i class="bi bi-person-circle org"></i> jbrooks215
+                <span class="badge-g">USER</span
+                ><span class="muted float-end">just now</span>
+                <div class="mt-2">
+                  <span class="org">@rocketindexer</span> Awesome, the link is
+                  live and driving traffic already! 🚀
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mono muted small mt-5">
+          Also Available in <b class="text-light">api</b> &amp;
+          <b class="text-light">webhooks</b>
+        </p>
+      </div>
+    </header>
+
+    <section style="background: linear-gradient(#050505, #0a0705, #050505)">
+      <div class="container text-center reveal">
+        <span class="pill mono"
+          ><span class="text-success">●</span> LIVE NETWORK STATUS</span
+        >
+        <p class="mono muted small mt-4 mb-1">REAL-TIME TELEMETRY</p>
+        <h3 class="mono mb-4">Engine Performance</h3>
+        <div class="panel metric">
+          <div class="mono muted small mb-2">
+            <i class="bi bi-clock"></i> AVG BOT VISIT TIME
+          </div>
+          <h2 class="mono">
+            <span id="avg">2.26</span><small class="muted fs-6"> min</small>
+          </h2>
+          <div class="bar my-3"><div id="bar"></div></div>
+          <div class="text-end mono muted" style="font-size: 0.65rem">
+            Optimal <span class="org">●</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="pill mono">INFRASTRUCTURE FOR SEO</span>
+          <h2 class="big mt-4">
+            Built for <em>speed.</em><br />Designed to scale.
+          </h2>
+          <p class="muted mx-auto mt-4" style="max-width: 560px">
+            Stop relying on organic crawling. Force Google &amp; Bing to index
+            your content the exact second you hit publish.
+          </p>
+        </div>
+        <div class="row g-3">
+          <div class="col-lg-8">
+            <div class="bento reveal" style="min-height: 260px">
+              <div class="ico o">
+                <i class="bi bi-lightning-charge-fill"></i>
+              </div>
+              <h5 class="mt-4 fs-4">Real-time Ping Protocol</h5>
+              <p class="mt-2" style="max-width: 420px">
+                We use a proprietary technique to instantly ping Googlebot and
+                notify search engines of your changes the moment they happen.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bento reveal">
+              <div class="ico"><i class="bi bi-activity"></i></div>
+              <h5>Guaranteed Results</h5>
+              <p>
+                We guarantee your URLs will be crawled within minutes of
+                submission. Our high-authority ping network ensures rapid
+                discovery by search engines.
+              </p>
+              <div class="fs-2 fw-bold">99.9%</div>
+              <div class="org mono" style="font-size: 0.62rem">
+                SUCCESS RATE
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="bento reveal">
+              <div class="ico"><i class="bi bi-bar-chart"></i></div>
+              <h5>SEO Analytics</h5>
+              <p>
+                Detailed reporting on crawler behavior, index status, and
+                potential technical SEO issues blocking your traffic.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="bento reveal">
+              <div class="row g-3 align-items-center">
+                <div class="col-md-6">
+                  <div class="ico"><i class="bi bi-code-slash"></i></div>
+                  <h5>Developer First API</h5>
+                  <p>
+                    Integrate directly into your CI/CD pipeline, CMS, or Edge
+                    Workers. Automate your indexing workflow.
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <pre class="code mono">
+// curl request
+curl -X POST https://api.rocketindexer.com/v1/submit \
+ -H "Authorization: Bearer sk_te..." \
+ -d '{"url": "https://example.com/new"}'</pre
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="bento reveal d-flex justify-content-between align-items-center gap-3"
+            >
+              <div>
+                <div class="ico"><i class="bi bi-globe"></i></div>
+                <h5>Chrome Extension</h5>
+                <p>
+                  Submit URLs directly from your browser. Index any page with a
+                  single click — no dashboard needed.
+                </p>
+                <a
+                  href="#"
+                  class="text-decoration-none small"
+                  style="color: #3b82f6"
+                  >Install Extension <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+              <div class="bigico g"><i class="bi bi-globe2"></i></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="bento reveal d-flex justify-content-between align-items-center gap-3"
+            >
+              <div>
+                <div class="ico"><i class="bi bi-search"></i></div>
+                <h5>Free URL Index Checker</h5>
+                <p>
+                  Check if your URLs are indexed on Google — instantly and for
+                  free. Verify index status for any page without signing up.
+                </p>
+                <a
+                  href="#"
+                  class="text-decoration-none small"
+                  style="color: #3b82f6"
+                  >Check URLs Now <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+              <div class="bigico b"><i class="bi bi-search"></i></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="bento reveal d-flex justify-content-between align-items-center gap-3"
+            >
+              <div>
+                <div class="ico"><i class="bi bi-chat"></i></div>
+                <h5>Telegram Bot</h5>
+                <p>
+                  Submit URLs, get real-time notifications when Google visits
+                  your pages, check your balance, and buy credits — all from
+                  Telegram.
+                </p>
+                <a
+                  href="#"
+                  class="text-decoration-none small"
+                  style="color: #3b82f6"
+                  >Learn More <i class="bi bi-arrow-right"></i
+                ></a>
+              </div>
+              <div class="bigico d"><i class="bi bi-chat-dots"></i></div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="cta-card reveal">
+              <div class="ico o" style="background: rgba(255, 255, 255, 0.2)">
+                <i class="bi bi-rocket-takeoff"></i>
+              </div>
+              <h5>Ready to boost?</h5>
+              <p class="small" style="color: #ffe0cf">
+                Join thousands of developers and SEOs ranking faster.
+              </p>
+              <a href="#" class="btn btn-dark2 w-100 mt-3">Get Started Free</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="pill mono">SCALE TRANSPARENTLY</span>
+          <h2 class="big mt-4">Simple pricing.<br /><em>No surprises.</em></h2>
+          <p class="muted mt-3">
+            Start free, scale as you grow. No hidden fees, no surprises.
+          </p>
+          <div class="toggle mt-3" id="tg">
+            <button class="active" data-p="personal">Personal</button
+            ><button data-p="business">Business</button>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center align-items-stretch">
+          <div class="col-md-6 col-lg-4">
+            <div class="plan">
+              <h6 class="fw-bold">Starter Plan</h6>
+              <div class="price" data-k="s">$3</div>
+              <div class="org small" data-c="s">60 Credits</div>
+              <ul class="mt-4">
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span data-f="s">60 indexing credits</span>
+                </li>
+                <li><i class="bi bi-check-circle"></i>Fast crawl guarantee</li>
+                <li><i class="bi bi-check-circle"></i>Full API access</li>
+                <li><i class="bi bi-check-circle"></i>Email support</li>
+              </ul>
+              <a href="#" class="btn btn-dark2 w-100 py-2">Get Started</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="plan pop">
+              <span class="tag">MOST POPULAR</span>
+              <h6 class="fw-bold">Pro Plan</h6>
+              <div class="price" data-k="p">$36</div>
+              <div class="org small" data-c="p">1,200 Credits</div>
+              <ul class="mt-4">
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span data-f="p">1200 indexing credits</span>
+                </li>
+                <li><i class="bi bi-check-circle"></i>Fast crawl guarantee</li>
+                <li><i class="bi bi-check-circle"></i>Sitemap submission</li>
+                <li><i class="bi bi-check-circle"></i>Full API access</li>
+                <li><i class="bi bi-check-circle"></i>Priority indexing</li>
+                <li><i class="bi bi-check-circle"></i>Priority support</li>
+                <li><i class="bi bi-check-circle"></i>Webhook notifications</li>
+              </ul>
+              <a href="#" class="btn btn-org w-100 py-2">Get Started</a>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="plan">
+              <h6 class="fw-bold">Premium Plan</h6>
+              <div class="price" data-k="x">$72</div>
+              <div class="org small" data-c="x">2,300 Credits</div>
+              <ul class="mt-4">
+                <li>
+                  <i class="bi bi-check-circle"></i
+                  ><span data-f="x">2300 indexing credits</span>
+                </li>
+                <li><i class="bi bi-check-circle"></i>Fast crawl guarantee</li>
+                <li><i class="bi bi-check-circle"></i>Sitemap submission</li>
+                <li><i class="bi bi-check-circle"></i>Full API access</li>
+                <li><i class="bi bi-check-circle"></i>Premium support</li>
+                <li><i class="bi bi-check-circle"></i>Priority processing</li>
+              </ul>
+              <a href="#" class="btn btn-dark2 w-100 py-2">Get Started</a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="bulk d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3 mt-5"
+        >
+          <div>
+            <strong>Need a Bulk Plan or Custom Discount?</strong>
+            <div class="small" style="color: #c9f2d9">
+              Get special pricing for high-volume indexing. Talk to us directly.
+            </div>
+          </div>
+          <a href="#" class="btn"
+            ><i class="bi bi-whatsapp text-success me-1"></i> Chat on
+            WhatsApp</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="text-center">
+      <div class="container reveal" style="padding: 60px 0">
+        <span class="pill mono">READY TO INDEX?</span>
+        <h2 class="big mt-4">
+          Start ranking in<br /><em>seconds, not days.</em>
+        </h2>
+        <p class="muted mt-4 mx-auto" style="max-width: 480px">
+          Join the smartest SEOs and developers. No credit card required to
+          start forcing your URLs into search engines.
+        </p>
+        <a href="#" class="btn btn-org px-5 py-3 mt-3">Get Started Free</a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-4">
+            <a
+              href="#"
+              class="logo fw-bold text-white d-flex align-items-center fs-6"
+              ><i class="bi bi-rocket-takeoff-fill"></i>RocketIndexer</a
+            >
+            <p class="muted small" style="max-width: 280px">
+              Lightning fast URL indexing with guaranteed crawl times. Get your
+              content indexed in search engines faster than ever before.
+            </p>
+            <i class="bi bi-twitter-x muted me-3"></i
+            ><i class="bi bi-linkedin muted"></i>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h6>Product</h6>
+            <a href="#">Features</a><a href="#">Pricing</a
+            ><a href="#">API Documentation</a><a href="#">FAQ</a>
+          </div>
+          <div class="col-6 col-lg-3">
+            <h6>Company</h6>
+            <a href="#">About Us</a><a href="#">Contact</a
+            ><a href="#">Privacy Policy</a><a href="#">Terms of Service</a
+            ><a href="#">Refund Policy</a>
+          </div>
+          <div class="col-6 col-lg-2">
+            <h6>Support</h6>
+            <a href="#">Help Center</a><a href="#">Email Support</a
+            ><a href="#">Documentation</a><a href="#">FAQ</a>
+          </div>
+        </div>
+        <p class="text-center muted mono mt-5 mb-0" style="font-size: 0.65rem">
+          Copyright © <span id="yr"></span> Rocket Indexer ™ — a Serperza LLC
+          brand. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <a href="#" class="wa" aria-label="WhatsApp"
+      ><i class="bi bi-whatsapp"></i
+    ></a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -2,7 +2,7 @@
     --bg: #050505;
     --card: #0d0d0d;
     --line: #1f1f1f;
-    --org: #ff5a0a;
+    --org:rgb(53, 180, 53);
     --mut: #8a8a8a;
     --grn: #22c55e
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .btn-org:hover {
-    background: #ff7a33;
+    background: rgb(53, 180, 53);
     color: #fff
 }
 
@@ -292,7 +292,7 @@ pre.code {
 }
 
 .cta-card {
-    background: linear-gradient(135deg, #ff5a0a, #e04500);
+    background: linear-gradient(135deg, rgb(53, 180, 53));
     border-radius: 20px;
     padding: 28px;
     height: 100%
